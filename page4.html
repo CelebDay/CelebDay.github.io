@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Happy birthday Hitesh!</title>
+  <title>Happy birthday! :) </title>
   
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,900' rel='stylesheet' type='text/css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -10,99 +10,44 @@
   <style>
   body {
     font: 13px "Source Sans Pro", Arial, Helvetica, sans-serif;
-    /* background-color: #1a1a1a; */
+    background-color: #1a1a1a;
     color: #fff;
     text-align: center;
   }
-
   .moving-letters {
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
-    bottom: 0;
+    bottom: 10px;
     margin: auto;
     height: 200px;
   }
-  p {
-  text-align: center;
-  font-size: 60px;
-  margin-top: 0px;
-}
-
-#myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-}
-
-
   </style>
 </head>
 <body>
-    <div id="marquee">
-        <div id="text">HELLO</div>
-      </div>
-
-    <video autoplay muted loop id="myVideo">
-        <source src="../../Video/Konark_Sun_Temple_Orissa_Odisha.mp4" type="video/mp4">
-      </video>
-        <p id="demo"></p>
   <div class="moving-letters">
-        
-        <div class="moving-letters">
-                
     <h1 class="ml9">
-  <span class="text-wrapper"> 
-        <span class="letters"></span><br>
-        <marquee behavior="scroll" direction="up" id="mymarquee" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();">
-            <p>This the the sample</p>
-            <p>of my text</p>
-          </marquee>
-    <span class="letters">A special day indeed </span><br>
-    <span class="letters">I woke up with a smile this morning &#9829; </span><br>
-    <span class="letters">And do you know what was I pondering about</span><br>
-            <span class="letters">YOU &#9829;</span><br>
-                    <span class="letters">It&#8242;s difficult to put into simple words </span><br>
-                            <span class="letters">So let me use some tough ones</span><br>
-                                    <span class="letters">In thuderous tempests to even walks</span><br>
-                                            <span class="letters">You have been holding my hands Standing strong &#9830;</span><br>
-                                                    <span class="letters"></span><br>
-                                                            <span class="letters">Take my hand take my whole life too</span><br>
-                                                                    <span class="letters">For I can&#8242;t help falling in love with you</span><br>
-    <span class="line line2"></span>
+  <span class="text-wrapper">
+    <span class="letters">Coffee mornings</span><br>
+    <span class="letters">Coffee mornings</span><br>
+    <span class="letters">Coffee mornings</span><br>
+    <span class="letters">Coffee mornings</span><br>
+    <span class="letters">Coffee mornings</span><br>
+    <span class="letters">Coffee mornings</span><br>
+    <span class="letters">Coffee mornings</span><br>
+    <span class="letters">Coffee mornings</span><br>
+    <span class="letters">Coffee mornings</span><br>
+    <span class="letters">Coffee mornings</span><br>
+    <span class="letters">Coffee mornings</span><br>
+    <span class="letters">Coffee mornings</span><br>
+    <span class="letters">Coffee mornings</span><br>
   </span>
 </h1>
 
 <!--more-->
 
 <script>
-
-  // for autoscroll
-
-  function pageScroll() {
-        window.scrollBy(0,50); // horizontal and vertical scroll increments
-        scrolldelay = setTimeout('pageScroll()',100); // scrolls every 100 milliseconds
-}
-
-
-  // for video in the background
-
-  var video = document.getElementById("myVideo");
-var btn = document.getElementById("myBtn");
-
-function myFunction() {
-  if (video.paused) {
-    video.play();
-    btn.innerHTML = "Pause";
-  } else {
-    video.pause();
-    btn.innerHTML = "Play";
-  }
-}
-
 // Wrap every letter in a span
 $('.ml9 .letters').each(function(){
   $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
@@ -111,10 +56,10 @@ ml.timelines["ml9"] = anime.timeline({loop: true})
   .add({
     targets: '.ml9 .letter',
     scale: [0, 1],
-    duration: 6000,
+    duration: 1500,
     elasticity: 600,
     delay: function(el, i) {
-      return 60 * (i+1)
+      return 45 * (i+1)
     }
   }).add({
     targets: '.ml9',
@@ -123,135 +68,27 @@ ml.timelines["ml9"] = anime.timeline({loop: true})
     easing: "easeOutExpo",
     delay: 1000
   });
-
-  var ml4 = {};
-ml4.opacityIn = [0,1];
-ml4.scaleIn = [0.2, 1];
-ml4.scaleOut = 3;
-ml4.durationIn = 800;
-ml4.durationOut = 600;
-ml4.delay = 500;
-ml.timelines["ml4"] = anime.timeline({loop: true})
-  .add({
-    targets: '.ml4 .letters-1',
-    opacity: ml4.opacityIn,
-    scale: ml4.scaleIn,
-    duration: ml4.durationIn
-  }).add({
-    targets: '.ml4 .letters-1',
-    opacity: 0,
-    scale: ml4.scaleOut,
-    duration: ml4.durationOut,
-    easing: "easeInExpo",
-    delay: ml4.delay
-  }).add({
-    targets: '.ml4 .letters-2',
-    opacity: ml4.opacityIn,
-    scale: ml4.scaleIn,
-    duration: ml4.durationIn
-  }).add({
-    targets: '.ml4 .letters-2',
-    opacity: 0,
-    scale: ml4.scaleOut,
-    duration: ml4.durationOut,
-    easing: "easeInExpo",
-    delay: ml4.delay
-  }).add({
-    targets: '.ml4 .letters-3',
-    opacity: ml4.opacityIn,
-    scale: ml4.scaleIn,
-    duration: ml4.durationIn
-  }).add({
-    targets: '.ml4 .letters-3',
-    opacity: 0,
-    scale: ml4.scaleOut,
-    duration: ml4.durationOut,
-    easing: "easeInExpo",
-    delay: ml4.delay
-  }).add({
-    targets: '.ml4',
-    opacity: 0,
-    duration: 500,
-    delay: 500
-  });
-
-
-//   Timer
-
-// Set the date we're counting down to
-var countDownDate = new Date("Oct 27, 2018 00:00:00").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-    // Get todays date and time
-    var now = new Date().getTime();
-    
-    // Find the distance between now and the count down date
-    var distance = countDownDate - now;
-    
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-    // Output the result in an element with id="demo"
-    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-    + minutes + "m " + seconds + "s ";
-    
-    // If the count down is over, write some text 
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("demo").innerHTML = "EXPIRED";
-    }
-}, 1000);
-
-// ---------------
-
 </script>
 
 <style>
-
-/* m14 ready */
-.ml4 {
-  position: relative;
-  font-weight: 900;
-  font-size: 2.5em;
-}
-.ml4 .letters {
-  position: relative;
-  margin: auto;
-  left: 0;
-  top: 0em;
-  right: 0;
-  opacity: 0; 
-  padding-top: 0;
-}
-
 .ml9 {
   position: relative;
   font-weight: 200;
-  font-size: 2em;
-  margin-top: 10px;
+  font-size: 4em;
 }
 .ml9 .text-wrapper {
   position: relative;
   display: inline-block;
-  margin-top: 0%;
-  padding-top: 0;
+  padding-top: 0.2em;
   padding-right: 0.05em;
   padding-bottom: 0.1em;
   overflow: hidden;
 }
 .ml9 .letter {
-  transform-origin: 100% 100%;
+  transform-origin: 50% 100%;
   display: inline-block;
-  line-height: 2em;
+  line-height: 1em;
 }
-
-/* Ready */
-
 </style>
 
 

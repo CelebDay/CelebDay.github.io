@@ -1,3 +1,22 @@
+var myButton = document.querySelector('button');
+var myHeading = document.querySelector('h1');
+
+function setUserName() {
+  var myName = prompt('Please enter your name.');
+  localStorage.setItem('name', myName);
+  myHeading.innerHTML = 'Welcome ' + myName;
+}
+
+if(!localStorage.getItem('name')) {
+  setUserName();
+} else {
+  var storedName = localStorage.getItem('name');
+  myHeading.innerHTML = 'Welcome ' + storedName;
+}
+
+
+
+
 var TxtType = function(el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;

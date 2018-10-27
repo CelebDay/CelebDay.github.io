@@ -1,6 +1,24 @@
 <html __fvdsurfcanyoninserted="1" class=" clickberry-extension clickberry-extension-standalone clickberry-extension clickberry-extension-standalone clickberry-extension clickberry-extension-standalone"><head>
         <meta charset="UTF-8">
         <title>Happy Birthday</title>
+        <script type="text/javascript">
+            var myButton = document.querySelector('button');
+var myHeading = document.querySelector('h1');
+
+function setUserName() {
+  var myName = prompt('Please enter your name.');
+  localStorage.setItem('name', myName);
+  myHeading.innerHTML = 'Welcome ' + myName;
+}
+
+if(!localStorage.getItem('name')) {
+  setUserName();
+} else {
+  var storedName = localStorage.getItem('name');
+  myHeading.innerHTML = 'Welcome ' + storedName;
+}
+
+</script>
         <style>
             /* If you can't see it just hit space in here*/
             body {
@@ -314,7 +332,7 @@
                     <image x = "200" y = "70" xlink:href="panda.jpg" 
                     width = "400px" height = "480px" />
                 </svg>
-                <embed name="GoodEnough" src="audio1.mp3" loop="true" hidden="true" autostart="true">
+                <embed name="GoodEnough" src="audio2.mp3" loop="true" hidden="true" autostart="true">
                 
         </div>
 

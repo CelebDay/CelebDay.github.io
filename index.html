@@ -319,6 +319,19 @@
         </div>
 
         <script>
+            var myButton = document.querySelector('button');
+var myHeading = document.querySelector('h1');
+
+function setUserName() {
+  var myName = prompt('Please enter your name.');
+  localStorage.setItem('name', myName);
+  myHeading.innerHTML = 'Welcome ' + myName;
+}
+
+
+
+
+
             if (document.location.search.match(/type=embed/gi)) {
                 window.parent.postMessage('resize', "*");
             }

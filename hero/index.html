@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Happy Birthday Hitesh!</title>
+<style>
+  body {
+    background-image: url("hig.gif");
+    background-color: #cccccc;
+    text-align: center;
+    height: 400px;
+
+    background-position: bottom;  /*Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 60%; /* Resize the background image to cover the entire container */
+  /*padding-top: 40px;?*/
+}
+
+</style>
+
+<script type="text/javascript">
+function SetValueClick() {
+  flag = 0;
+  var name = document.getElementById("name");
+  localStorage.setItem("myName", name.value);
+
+  if(name.value == "MONU") {
+      flag = 1;
+  }
+  else {
+      alert("Sorry!");
+  }
+
+    if(flag == 1) {
+      alert("The real fun starts now!!!");
+      openWindow = window.open("page1.html");
+  }
+}
+
+</script>
+
+<body>
+  <div class="div2">
+  What's your nick name? (Use caps!) <input id = "name" type = "text" required /> <br>
+  <input type ="button" value = "Go!" placeholder="Name" onclick="SetValueClick()">
+</div>
+	</body>
+	</html>
